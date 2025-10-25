@@ -1,0 +1,49 @@
+# This workflow builds and deploys a .NET app to an Azure App Service.
+#
+# 1. Set up the AZURE_WEBAPP_PUBLISH_PROFILE secret in your GitHub repo settings.
+# 2. Change 'YOUR_APP_NAME_HERE' to your actual App Service name.
+
+name: Deploy .NET App to Azure App Service
+
+# Triggers the workflow on push events to the "main" branch
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch: # Allows you to run this workflow manually from the Actions tab
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checks out your repository under $GITHUB_WORKSPACE
+      - name: 'Checkout GitHub Action'
+        uses: actions/checkout@v4
+
+      # Sets up the .NET 8 SDK
+      - name: 'Set up .NET 8'
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+
+      # Builds the project in Release configuration
+      - name: 'Build with dotnet'
+        run: dotnet build --configuration Release
+
+      # Publishes the project to a new 'publish' folder
+      - name: 'Publish with dotnet'
+        run: dotnet publish -c Release -o ./publish
+
+      # Deploys the contents of the 'publish' folder to your App Service
+      - name: 'Deploy to Azure Web App'
+        uses: azure/webapps-deploy@v3
+        with:
+          # IMPORTANT: Change this to your App Service name
+          app-name: 'quickfeedback-app' 
+          
+          # This secret holds your publish profile XML
+          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
+          
+          # This is the folder that gets deployed
+          package: './publish'
+
