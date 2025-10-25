@@ -170,3 +170,4 @@ C:\Users\AmareshSwamy\Desktop\AI\.Net\p4\QuickFeedback\QuickFeedback\bin\Debug\n
 C:\Users\AmareshSwamy\Desktop\AI\.Net\p4\QuickFeedback\QuickFeedback\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\AmareshSwamy\Desktop\AI\.Net\p4\QuickFeedback\QuickFeedback\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
 C:\Users\AmareshSwamy\Desktop\AI\.Net\p4\QuickFeedback\QuickFeedback\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\AmareshSwamy\Desktop\AI\.Net\p4\QuickFeedback\QuickFeedback\obj\Debug\net8.0\QuickFeedback.sourcelink.json

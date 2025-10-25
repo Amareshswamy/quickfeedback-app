@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("QuickFeedback")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0d418fd59ff3c254b36aa8e116c0077c80a5da3a")]
 [assembly: System.Reflection.AssemblyProductAttribute("QuickFeedback")]
 [assembly: System.Reflection.AssemblyTitleAttribute("QuickFeedback")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
