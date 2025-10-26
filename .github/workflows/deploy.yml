@@ -105,4 +105,3 @@ jobs:
           # No slot-name means it deploys to the 'production' slot
           publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE_PROD }}
           package: '.'
-
