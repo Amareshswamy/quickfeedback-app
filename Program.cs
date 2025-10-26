@@ -20,6 +20,7 @@ builder.Services.AddCors(options =>
         policy => policy.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
 });
 
+//NEW FINE 
 
 var app = builder.Build();
 
